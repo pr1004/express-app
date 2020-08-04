@@ -13,9 +13,7 @@ router.post('/', (req, res) => {
     var pwd = req.body.pwd;
     const QUERY = `select * from users where email="${email}";`;
     db.all(QUERY, (_, row) =>{
-        console.log(row);
         if(row.length == 0) return res.render('login',  { msg : "다시 로그인 하세요!"});
-
         if(row[0].password == pwd ){
             session.user = row[0];
             return res.redirect('/board');
