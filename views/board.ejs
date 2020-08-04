@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>글 목록 (접속성공)</h1>
+    <table>
+        <thead>
+        <th>게시물번호</th>
+        <th>제목</th>
+        <th>좋아요</th>
+        </thead>
+        <tbody>
+            <% contents.forEach(function (value, key) { %>
+            <tr>
+                <td><%= value.id %></td>
+                <td><%= value.title %></td>
+                <td><%= value.like %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
 </body>
 </html>
