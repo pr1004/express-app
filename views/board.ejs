@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <th>게시물번호</th>
+        <th>제목</th>
+        <th>좋아요</th>
+        </thead>
+        <tbody>
+            <% contents.forEach(function (value, key) { %>
+            <tr>
+                <td><%= value.id %></td>
+                <td><%= value.title %></td>
+                <td><%= value.like %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
