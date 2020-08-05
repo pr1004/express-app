@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
             session.user = row[0];
             return res.redirect('/board');
         }
-        return;
+        return res.redirect('/');
     })
 })
 
