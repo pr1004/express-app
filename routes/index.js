@@ -5,7 +5,8 @@ var session = require('express-session')
 router.get('/', function(req, res, next) {
   if(session.user == undefined) 
     return res.render('login',{ msg: "로그인 해주세요"});
-  res.render('board')
+  else
+    return res.redirect('/board')
 });
 
 module.exports = router;
