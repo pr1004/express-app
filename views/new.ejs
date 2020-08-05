@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시물 작성</title>
+  </head>
+  <body>
+    <form action="/new" method="post">
+      <div>제목</div>
+      <input type="text" name="title" />
+      <div>작성자 <%= author %></div>
+      <div>내용</div>
+      <input type="text" name="content" />
+      <input type="submit" value="글 게시" />
+    </form>
+  </body>
+</html>
