@@ -16,9 +16,11 @@
         <% contents.forEach(function (value, key) { %>
         <tr>
           <td><%= value.id %></td>
-          <td><%= value.title %></td>
+          <td><a href="/show/<%= value.id %>"><%= value.title %></a></td>
           <td><%= value.like %></td>
-          <td><button><a href="/edit/<%= value.id %>">글 수정하기</a></button></td>
+          <td>
+            <button><a href="/edit/<%= value.id %>">글 수정하기</a></button>
+          </td>
         </tr>
         <% }) %>
       </tbody>
